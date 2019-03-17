@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c68e07b5be804a4c955d1cae03fcd6c9" Name="Diagram1">
+        <EntityTypeShape EntityType="NewSales2Model.Customer" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewSales2Model.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewSales2Model.OrderItem" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewSales2Model.Product" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewSales2Model.Store" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NewSales2Model.Supplier" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="NewSales2Model.FK_Order_CustomerId_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="NewSales2Model.FK_115" ManuallyRouted="false" />
+        <AssociationConnector Association="NewSales2Model.FK_OrderItem_OrderId_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="NewSales2Model.FK_OrderItem_ProductId_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="NewSales2Model.FK_Product_SupplierId_Supplier" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

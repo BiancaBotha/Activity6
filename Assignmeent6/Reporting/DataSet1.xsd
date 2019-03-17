@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Store_x0020_" msprop:Generator_TableClassName="Store_DataTable" msprop:Generator_TableVarName="tableStore_" msprop:Generator_RowChangedName="Store_RowChanged" msprop:Generator_TablePropName="Store_" msprop:Generator_RowDeletingName="Store_RowDeleting" msprop:Generator_RowChangingName="Store_RowChanging" msprop:Generator_RowEvHandlerName="Store_RowChangeEventHandler" msprop:Generator_RowDeletedName="Store_RowDeleted" msprop:Generator_RowClassName="Store_Row" msprop:Generator_UserTableName="Store " msprop:Generator_RowEvArgName="Store_RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StoreId" msprop:Generator_ColumnVarNameInTable="columnStoreId" msprop:Generator_ColumnPropNameInRow="StoreId" msprop:Generator_ColumnPropNameInTable="StoreIdColumn" msprop:Generator_UserColumnName="StoreId" type="xs:short" minOccurs="0" />
+              <xs:element name="StoreName" msprop:Generator_ColumnVarNameInTable="columnStoreName" msprop:Generator_ColumnPropNameInRow="StoreName" msprop:Generator_ColumnPropNameInTable="StoreNameColumn" msprop:Generator_UserColumnName="StoreName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Order" msprop:Generator_TableClassName="OrderDataTable" msprop:Generator_TableVarName="tableOrder" msprop:Generator_RowChangedName="OrderRowChanged" msprop:Generator_TablePropName="Order" msprop:Generator_RowDeletingName="OrderRowDeleting" msprop:Generator_RowChangingName="OrderRowChanging" msprop:Generator_RowEvHandlerName="OrderRowChangeEventHandler" msprop:Generator_RowDeletedName="OrderRowDeleted" msprop:Generator_RowClassName="OrderRow" msprop:Generator_UserTableName="Order" msprop:Generator_RowEvArgName="OrderRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" msprop:Generator_UserColumnName="OrderId" type="xs:short" minOccurs="0" />
+              <xs:element name="_x005B_OrderNumber_x005D_" msprop:Generator_ColumnVarNameInTable="_column_OrderNumber_" msprop:Generator_ColumnPropNameInRow="__OrderNumber_" msprop:Generator_ColumnPropNameInTable="__OrderNumber_Column" msprop:Generator_UserColumnName="[OrderNumber]" type="xs:string" minOccurs="0" />
+              <xs:element name="_x005B_CustomerId_x005D_" msprop:Generator_ColumnVarNameInTable="_column_CustomerId_" msprop:Generator_ColumnPropNameInRow="__CustomerId_" msprop:Generator_ColumnPropNameInTable="__CustomerId_Column" msprop:Generator_UserColumnName="[CustomerId]" type="xs:short" minOccurs="0" />
+              <xs:element name="_x005B_OrderDate_x005D_" msdata:DataType="System.DateTimeOffset" msprop:Generator_ColumnVarNameInTable="_column_OrderDate_" msprop:Generator_ColumnPropNameInRow="__OrderDate_" msprop:Generator_ColumnPropNameInTable="__OrderDate_Column" msprop:Generator_UserColumnName="[OrderDate]" type="xs:anyType" minOccurs="0" />
+              <xs:element name="_x005B_TotalAmount_x005D_" msprop:Generator_ColumnVarNameInTable="_column_TotalAmount_" msprop:Generator_ColumnPropNameInRow="__TotalAmount_" msprop:Generator_ColumnPropNameInTable="__TotalAmount_Column" msprop:Generator_UserColumnName="[TotalAmount]" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x005B_StoreId_x005D_" msprop:Generator_ColumnVarNameInTable="_column_StoreId_" msprop:Generator_ColumnPropNameInRow="__StoreId_" msprop:Generator_ColumnPropNameInTable="__StoreId_Column" msprop:Generator_UserColumnName="[StoreId]" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Store_x0020_Key1">
+      <xs:selector xpath=".//mstns:Store_x0020_" />
+      <xs:field xpath="mstns:StoreId" />
+    </xs:unique>
+    <xs:unique name="OrderKey1">
+      <xs:selector xpath=".//mstns:Order" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+    <xs:keyref name="FK_Order_Store_x0020_" refer="OrderKey1" msdata:ConstraintOnly="true">
+      <xs:selector xpath=".//mstns:Store_x0020_" />
+      <xs:field xpath="mstns:StoreId" />
+    </xs:keyref>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Order_Store_x0020_" msdata:parent="Order" msdata:child="Store_x0020_" msdata:parentkey="OrderId" msdata:childkey="StoreId" msprop:Generator_UserChildTable="Store " msprop:Generator_ChildPropName="GetStore_Rows" msprop:Generator_UserRelationName="Order_Store " msprop:Generator_ParentPropName="OrderRow" msprop:Generator_RelationVarName="relationOrder_Store_" msprop:Generator_UserParentTable="Order" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
